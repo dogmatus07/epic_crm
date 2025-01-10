@@ -1,6 +1,7 @@
 from crm.db.base import Base
 from crm.db.session import engine, SessionLocal
 from crm.models.models import Role, User
+from crm.cli.cli_commands import welcome_message
 
 
 def seed_database():
@@ -50,3 +51,4 @@ if __name__ == "__main__":
     seed_database()
     print("Peuplement de la base de données terminé avec succès !")
     
+    welcome_message()
